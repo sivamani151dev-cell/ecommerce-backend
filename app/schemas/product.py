@@ -7,15 +7,15 @@ class ProductCreate(BaseModel):
     description: Optional[str] = None
     price: float
     stock: int = 0
-    category_id = Optional[int] = None
+    category_id : Optional[int] = None
 
 class ProductUpdate(BaseModel):
-    name = Optional[str] = None
-    description = Optional[str] = None
-    price = Optional[float] = None
-    stock = Optional[int] = None
-    category_id = Optional[int] = None
-    is_active = Optional[bool] = None
+    name : Optional[str] = None
+    description : Optional[str] = None
+    price : Optional[float] = None
+    stock : Optional[int] = None
+    category_id : Optional[int] = None
+    is_active : Optional[bool] = None
 
 class ProductResponse(BaseModel):
     id : int

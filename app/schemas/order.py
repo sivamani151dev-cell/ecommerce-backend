@@ -19,7 +19,7 @@ class OrderResponse(BaseModel):
     shipping_address: Optional[str]
     created_at: datetime
     user_id: int
-    items = list[OrderItemResponse] = []
+    items : list[OrderItemResponse] = []
 
     class Config:
         from_attributes=True
