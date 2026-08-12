@@ -161,6 +161,10 @@ ecommerce-backend/
 ## 📸 Screenshots
 
 ![Swagger UI](docs/swagger_overview.png)
+![Swagger UI](docs/swagger_overview2.png)
+![Swagger UI](docs/swagger_auth.png)
+![Swagger UI](docs/swagger_schemas.png)
+
 
 
 ## Live Deployment 
