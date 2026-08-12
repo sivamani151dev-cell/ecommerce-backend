@@ -23,14 +23,14 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     new_user = User(
         email = user.email,
         username = user.username,
-        hashed_password = hash_password(user.password())
+        hashed_password = hash_password(user.password)
     )
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
     return new_user
 
-@router.post("login", response_model=Token)
+@router.post("/login", response_model=Token)
 def login(username: str, password: str, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.username == username).first()
     if not user:
